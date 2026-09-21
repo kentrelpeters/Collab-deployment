@@ -87,3 +87,6 @@ This project is for educational purposes.
 ---
 
 *Built with ❤️ by the TechFlow Solutions team*
+## Project
+
+This project demonstrates Git branching, pull requests, and GitHub Actions.
