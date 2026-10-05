@@ -1,92 +1,61 @@
 # TechFlow Solutions Website
 
-A modern, responsive website for TechFlow Solutions - a web development company specializing in custom websites for small businesses.
-
-## Project Structure
-
-```
-techflow-website/
-├── index.html          # Main HTML file
-├── styles.css          # CSS stylesheet
-├── script.js           # JavaScript functionality
-├── README.md          # Project documentation
-└── .github/
-    └── workflows/
-        └── deploy.yml  # GitHub Actions deployment workflow
-```
+An educational sample company website used to practice web development and collaborative Git workflows. Company claims, contact information, and team profiles are sample content rather than Kentrel Peters's professional experience.
 
 ## Features
 
-- **Responsive Design**: Works seamlessly across desktop, tablet, and mobile devices
-- **Modern UI**: Clean, professional design with smooth animations
-- **Contact Form**: Interactive contact form with basic validation
-- **Smooth Navigation**: Scroll-to-section navigation with fixed header
-- **GitHub Pages Ready**: Configured for automatic deployment
+- Home, about, team, and contact sections.
+- Smooth scrolling for section links.
+- A header background that changes when scrolling.
+- A demonstration contact form with required fields and an email input.
+- A GitHub Actions workflow for validation and GitHub Pages deployment.
 
-## Technologies Used
+## Technologies
 
-- HTML5
-- CSS3 (Flexbox, Grid, Media Queries)
-- Vanilla JavaScript (ES6+)
-- GitHub Actions for CI/CD
+HTML, CSS, vanilla JavaScript, and GitHub Actions.
 
-## Getting Started
+## Project structure
 
-### Prerequisites
-- Git installed on your local machine
-- A modern web browser
-- Text editor (VS Code recommended)
+- `index.html`: Page content and form.
+- `styles.css`: Layout and visual styling.
+- `script.js`: Navigation, header behavior, and demonstration form handling.
+- `.github/workflows/deploy.yml`: Validation and deployment workflow.
+- [WORKFLOW_ANALYSIS.md](WORKFLOW_ANALYSIS.md): Coursework workflow analysis.
 
-### Local Development
+## Run locally
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/techflow-website.git
-   cd techflow-website
-   ```
+Enter these commands in a terminal:
 
-2. Open the project in your text editor:
-   ```bash
-   code .
-   ```
+```bash
+git clone https://github.com/kentrelpeters/Collab-deployment.git
+cd Collab-deployment
+```
 
-3. Open `index.html` in your browser to view the website locally.
+Open `index.html` in a browser. No dependency installation or build step is required. Open the folder through your text editor's **Open Folder** menu to edit it.
 
-### Making Changes
+## Usage and manual checks
 
-This project follows a professional Git workflow:
+1. Click **About** or **Contact** to check section navigation.
+2. Scroll down to check the header background change.
+3. Enter a name, valid email address, and message, then submit the form.
+4. Confirm that a thank-you alert appears and the form resets.
 
-1. Create a feature branch for your changes
-2. Make your modifications
-3. Test your changes locally
-4. Commit with descriptive messages
-5. Push to GitHub and create a pull request
+The form only displays an alert. It does not send email, store submissions, or contact a business.
 
-## Deployment
+## Deployment workflow
 
-The website is automatically deployed to GitHub Pages using GitHub Actions when changes are pushed to the `main` branch.
+The workflow runs on pushes and pull requests targeting `main`. It validates HTML, attempts a Markdown link check, and uploads a Pages artifact. The deploy job runs after the build job succeeds, only for pushes to `main`.
 
-**Live Site**: [Your GitHub Pages URL will appear here]
+Successful hosting also depends on GitHub Pages repository configuration and a successful workflow run. A live deployment has not been verified in this documentation.
 
-## Development Workflow
+The link-check step currently references `.github/linters/link-check-config.json`, which is absent from the repository. That step uses `continue-on-error: true`, so a failed link check does not stop the workflow.
 
-This project is designed to practice professional development workflows including:
-- Git branching strategies
-- Pull request reviews
-- Automated deployment with GitHub Actions
-- Repository access management
+## Learning focus
 
-## Contributing
+This project provides practice with Git branches, pull requests, website structure, JavaScript interactions, and deployment configuration. See the workflow analysis for the existing coursework discussion.
 
-This is a learning project for practicing collaborative development workflows. Follow the assignment instructions for contributing to this repository.
+## Limitations and next improvements
 
-## License
+The page includes sample team entries and placeholder content. Future improvements could replace that content, add real form processing, and correct the link-check configuration.
 
 This project is for educational purposes.
-
----
-
-*Built with ❤️ by the TechFlow Solutions team*
-## Project
-
-This project demonstrates Git branching, pull requests, and GitHub Actions.
